@@ -1,5 +1,5 @@
-
-export async function getFood() { /*Hämtar data via api */
+//Modul export - Hämtar lista över maträtter via api
+export async function getFood() {
 
     const apikey = '&apiKey=123c9d35b1014e16a9c47bf62e7cad6e';
     let fe = await fetch('https://api.spoonacular.com/recipes/complexSearch?includeIngredients=' + ListToSearch() + apikey);
@@ -8,7 +8,8 @@ export async function getFood() { /*Hämtar data via api */
     return data;
 };
 
-export async function getFoodR() { /*Hämtar data via api */
+//Modul export - Hämtar slumpmässig maträtt via api
+export async function getFoodR() {
 
     const apikey = '&apiKey=123c9d35b1014e16a9c47bf62e7cad6e';
     let fe = await fetch('https://api.spoonacular.com/recipes/complexSearch?includeIngredients=' + ListToSearchRoulette() + apikey);
@@ -17,7 +18,8 @@ export async function getFoodR() { /*Hämtar data via api */
     return data;
 };
 
-function ListToSearch(){//ändra i denna för fler sökningar med if
+//skapar sträng över argument parametrar för api anrop
+function ListToSearch(){
     let result = '';
     let ingArray = localStorage.getItem('ings') ?
     JSON.parse(localStorage.getItem('ings')) : [];
@@ -33,7 +35,9 @@ function ListToSearch(){//ändra i denna för fler sökningar med if
     return result;
     
 }
-function ListToSearchRoulette(){//ändra i denna för fler sökningar med if
+
+//skapar sträng över argument parametrar för api anrop
+function ListToSearchRoulette(){
     let result = '';
     let ingArray = localStorage.getItem('ings') ?
     JSON.parse(localStorage.getItem('ings')) : [];
@@ -49,6 +53,3 @@ function ListToSearchRoulette(){//ändra i denna för fler sökningar med if
     return result;
 
 }
-
-//result = result + '&number=1&sort=random&addRecipeInformation=true';
-//'https://api.spoonacular.com/recipes/complexSearch?&includeIngredients='

@@ -33,8 +33,6 @@
             <form id="form">
                 <h2>SEARCH FOR DISHES</h2>
                 <div class="ticboxes">
-                    <label for="exact">Only use the ingredients enterd</label>
-                    <input onclick="display()" type="checkbox" id="exact" name="exact"><br>
                     <div id="hide">
                         <label for="spices">include spices in search</label>
                         <input type="checkbox" id="spices" name="spices"><br>
@@ -47,9 +45,9 @@
                 <div id="inglist" class="inglist">
                     <input type='button' onclick="delbutton()" id="clear" value="Clear list" class="clear"><br>
                     <h2>Choosen ingredients:</h2>
-                    <ul class='ingListUl' id="list"><!--Skriver ut ingredienserna-->
-                        <li id="ingarr"></li>
-                    </ul>
+                    <table class='ingListUl'><!--Skriver ut ingredienserna-->
+                        <tbody id="list"></tbody>
+                    </table>
                 </div><br>
                 <input type='button' id="submitbtn" value="Submit" class="submit" /><br>
             </form>
@@ -66,70 +64,7 @@
         <p>copyright@MikaelaFrendin2023</p>
     </footer>
 
-    <script>
-
-let ing = document.getElementById('ing');
-let ingArray = localStorage.getItem('ings') ?
-JSON.parse(localStorage.getItem('ings')) : [];
-let ul = document.getElementById('list');
-
-
-ingArray.forEach(addIng);
-
-function addIng(text){
-    
-    let delbut = document.createElement('input');
-    let li = document.createElement('li');
-    let span = document.createElement('span');
-    span.textContent = text;
-    ul.appendChild(li);
-    li.appendChild(span);
-    li.appendChild(delbut);
-    span.setAttribute("class", "spanIng")
-    delbut.setAttribute("type", "button");
-    delbut.setAttribute("onclick", "delone(this)");
-    delbut.setAttribute("value", "remove");
-    delbut.setAttribute("class", "removeOne");
-};
-
-function addbutton(){
-    
-    ingArray.push(ing.value);
-    localStorage.setItem('ings', JSON.stringify(ingArray));
-    addIng(ing.value);
-    ing.value = '';
-};
-    function delbutton(){
-    localStorage.clear();
-    ul.innerHTML = '';
-    ingArray = [];
-
-};
-function delone(item){
-    let value = item.parentElement.querySelector('span').innerText;
-    for (let i = 0; i < ingArray.length; i++) {
-        if (ingArray[i] == value) {
-            ingArray.splice(i, 1);
-            break;
-        }
-    }
-    localStorage.setItem('ings', JSON.stringify(ingArray));
-    item.parentElement.remove();
-};
-
-function display() {
-let spices = document.getElementById('spices');
-let exact = document.getElementById('exact');
-    if (exact.checked) {
-        hide.style.display = 'block';
-
-    }else {
-        hide.style.display = 'none';
-
-    };
-};
-
-    </script>
+    <script src="/js/widget/search.js"></script>
 </body>
 </html>
 <!--To Do 
