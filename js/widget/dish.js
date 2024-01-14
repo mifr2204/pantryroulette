@@ -1,26 +1,28 @@
-
-export function dname(data){ //Printar ut namnet på rätten
-    let disharray = data.results;
-    disharray.forEach(nprint);
-    
-    function nprint(dish){
-
-        let ul = document.getElementById('dishlist');
-        let li = document.createElement('li');
-        let h2 = document.createElement('h2');
-        h2.textContent = dish.title;
-        li.innerHTML='<br>'
-        li.appendChild(h2);
-        ul.appendChild(li);
-        h2.setAttribute('class', 'name');
-    };
+//Modul export - Printar ut namnet på rätten
+export function dname(dish){
+    let ul = document.getElementById('dishlist');
+    let li = document.createElement('li');
+    let h2 = document.createElement('h2');
+    h2.textContent = dish.title;
+    li.innerHTML='<br>'
+    li.appendChild(h2);
+    ul.appendChild(li);
+    h2.setAttribute('class', 'name');
 };
-export function ingredientsPrint(data){ //printar ut ingredienserna
+
+//Modul export - printar ut ingredienserna
+export function ingredientsPrint(dish){
     
     let ingreditents = [];
-    for (let i = 0; i < data.results[0].analyzedInstructions[0].steps.length; i++) {
-        for (let j = 0; j < data.results[0].analyzedInstructions[0].steps[i].ingredients.length; j++) {
-            let ingredient = data.results[0].analyzedInstructions[0].steps[i].ingredients[j].name;
+    if (dish.analyzedInstructions.length < 1)
+    {
+        console.log('No steps');
+        return;
+    }
+
+    for (let i = 0; i < dish.analyzedInstructions[0].steps.length; i++) {
+        for (let j = 0; j < dish.analyzedInstructions[0].steps[i].ingredients.length; j++) {
+            let ingredient = dish.analyzedInstructions[0].steps[i].ingredients[j].name;
             if (ingreditents.indexOf(ingredient) < 0) {
                 ingreditents.push(ingredient);
             }
@@ -36,7 +38,7 @@ export function ingredientsPrint(data){ //printar ut ingredienserna
         result = result + '- ' + ingreditents[i];
     };
 
-        function printIngTitle(data){
+        function printIngTitle(){
             let ul = document.getElementById('dishlist');
             let li = document.createElement('li');
             let span = document.createElement('span');
@@ -64,50 +66,43 @@ export function ingredientsPrint(data){ //printar ut ingredienserna
         ul.appendChild(li);
         span.setAttribute('class', 'ingredients');
 
-
-  
-   
-    console.log(result);
     //TODO: skriv ut resultatet i HTML
 };
-export function steps(data){ //Printar ut instruktionerna
-    let disharray = data.results;
-    disharray.forEach(dprint);
 
-    function dprint(dish){
 
-        let dishinst = dish.analyzedInstructions
-        dishinst.forEach(instPrint);
+//Modul export - Printar ut instruktionerna
+export function steps(dish){
+    let dishinst = dish.analyzedInstructions
+    dishinst.forEach(instPrint);
 
-        function instPrint(instructions){
+    function instPrint(instructions){
 
-            let stepsarr = instructions.steps
-            
+        let stepsarr = instructions.steps
+        
+        let ol = document.getElementById('dishlist');
+        let h3 = document.createElement('h3');
+        let li = document.createElement('li');
+        
+        h3.textContent = 'Instructions';
+        
+        li.appendChild(h3);
+        ol.appendChild(li);
+        
+        h3.setAttribute('class', 'titleInstructions');
+        
+        stepsarr.forEach(inst2);
+        
+        function inst2(steps){
             let ol = document.getElementById('dishlist');
-            let h3 = document.createElement('h3');
-            let li = document.createElement('li');
-            
-            h3.textContent = 'Instructions';
-            
-            li.appendChild(h3);
-            ol.appendChild(li);
-            
-            h3.setAttribute('class', 'titleInstructions');
-            
-            stepsarr.forEach(inst2);
-            
-            function inst2(steps){
-                let ol = document.getElementById('dishlist');
 
-                let li = document.createElement('li');
-                let span = document.createElement('span');
-                span.textContent = steps.step;
-                li.innerHTML='<br>'
-                li.appendChild(span);
-                ol.appendChild(li);
-                span.setAttribute('class', 'instructions');
-    
-            };
+            let li = document.createElement('li');
+            let span = document.createElement('span');
+            span.textContent = steps.step;
+            li.innerHTML='<br>'
+            li.appendChild(span);
+            ol.appendChild(li);
+            span.setAttribute('class', 'instructions');
+
         };
     };
  

@@ -350,6 +350,20 @@ footer {
 }
 
 /*media*/
+#videomodal {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #000000;
+    display: none;
+}
+#videomodal video {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
 @media screen and (max-width: 1020px){
     nav{
         display: none;
