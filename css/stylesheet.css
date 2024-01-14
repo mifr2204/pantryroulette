@@ -1,0 +1,377 @@
+a:focus, button:focus, input[type="button"]:focus, #add:focus, #clear:focus, #submitbtn:focus, #submitbtnR:focus, #backbtn:focus{
+    border: black solid 4px;
+}
+main{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 1.7rem;
+    letter-spacing: 0.08rem;
+}
+
+h1, nav, footer, #dishlist, #menu{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+}
+#dishlist, #list{
+    font-family: 'Poppins', sans-serif;
+}
+h2{
+    text-align: center;
+}
+p{
+    font-size: 18px;
+}
+body{
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1024px;
+}
+header {
+    background-color: #507D25;
+    margin: 0;
+    display: flex;
+    height: 9rem;
+}
+#headimg {
+    display: flex;
+    align-items:center;
+}
+header img {
+    margin-left: 3rem;
+    margin-top: 1rem;
+}
+header h1 {
+    color: #ffffff;
+    margin-left: 3rem;
+    font-size: 40px;
+    margin-top: 2rem;
+}
+nav {
+    margin-left: auto;
+    margin-right: 2rem;
+    margin-top: 3rem;
+}
+ul {
+    display: flex;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #ffffff; 
+    padding: 1rem;
+    margin: 0.1rem; 
+    font-size: 25px;
+}
+#img {
+    background-color: #DAA960;
+    background-image: url(/images/foodopa.png);
+    background-position: center;
+    background-size: 100wv;
+    min-height: 100vh;
+    padding-top: 70px;
+    padding-bottom: 2rem;
+}
+.cont {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 400;
+}
+main a{
+    color:#507D25;
+    font-weight: 600;
+    font-size: 20px;
+}
+article {
+    background-color: white;
+    max-width: 43%;
+    margin-left: 3rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+.cont img {
+    margin-right: 3rem;
+}
+#cont2 {
+    padding-bottom: 5rem;
+    padding-top: 3rem;
+}
+footer {
+    text-align: center;
+    background-color: #507D25;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color:#ffffff    
+}
+#form {
+    background-color: #ffffff;
+    min-height: 300px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    padding: 2rem;
+}
+input {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 6rem;
+}
+label{
+    margin-left: 6rem;
+}
+.ticboxes {
+    margin-bottom: 3rem;
+}
+.submit{
+    float: right;
+    margin-top: 0;
+    margin-right: 2rem;
+}
+.inglist{
+    border: black 1px solid;
+    font-size: 20px;
+    margin-top: 2rem;
+}
+.inglist h2{
+    margin-bottom:3rem;
+    font-size: 27px;
+    text-align: center;
+}
+#list li{
+    display: flex;
+    justify-content: space-between;
+}
+.removeOne{
+    margin-right: 150px;
+    margin-top:0;
+}
+.spanIng{
+    margin-left: 100px;
+}
+#hide{
+    display: none;
+}
+#list {
+    display: block;
+}
+#dishlist{
+    display: block;
+    margin-top: 0;
+    display: none;
+    padding-left: 0;
+    text-align: center;
+}
+#dishlist li{
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+#dishlist h2{
+    text-decoration: underline;
+    border-top: black solid 3px;
+    padding-top: 3rem;
+    margin-bottom: 0;
+}
+h2{
+    text-decoration: underline;
+    font-size: 27px;
+}
+#dishlist h2, h3 {
+    text-align: center;
+}
+#dishlist h3{
+    margin-top: 2.5rem;
+}
+#disches{
+    display: none;
+    background-color: white;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 4rem;
+    margin-bottom: 0;
+    padding-top: 2rem;
+}
+#backbtn{
+    margin-left: 3rem;
+    display: none;
+}
+button, #submitbtn, #submitbtnR, #add, #submitbtnCont{
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+    font-size: 15px;
+    background-color: #507D25;
+    color: #ffffff;
+    border: black solid 2.6px;
+}
+#clear, .removeOne{
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    font-size:15px;
+    background-color: darkred;
+    color: #ffffff;
+    border: black solid 2.6px;
+}
+#clear{
+    margin-top: 1rem;
+    margin-left: 2rem;
+    margin-bottom: 0;
+}
+form h2{
+    text-align: center;
+}
+.artAbout{
+    background-image: url(/images/roulette.jpeg);
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 4rem;
+    margin-bottom: 0;
+    padding-top: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    color: black
+}
+.artAbout h2{
+    text-align: center;
+    margin-bottom: 3rem; 
+}
+#aboutTop, #why{
+    background-color:rgba(240, 240, 240,0.94);
+    padding: 1rem;
+}
+
+#jessie, #mark, #fari{
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+    background-color: #DAA960;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+#jessie p, #mark p, #fari p{
+    max-width: 60%;
+}
+#jessie {
+    margin-top: 3rem;
+}
+h3{
+    font-size: 23px;
+}
+#why{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#why img{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+}
+#contactform{
+    border: rgba(240, 240, 240,1) solid 40px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    background-color: #DAA960;
+}
+.cForm{
+    display: flex;
+    justify-content:flex-end;
+    margin-top: 1rem;
+}
+.cForm input, .cForm label, .cForm textarea{
+    margin: 0;
+}
+.cForm input, .cForm textarea{
+    margin-right: 6rem;
+}
+.cForm label{
+    margin-right: 5rem;
+}
+#dCText{
+    min-height: 3rem;
+}
+#submitbtnCondiv{
+    display: flex;
+    justify-content: flex-end;
+}
+#submitbtnCont{
+    margin-right: 3rem;
+    margin-top: 2rem;
+}
+#formP{
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    text-align: center;
+}
+#headC{
+    background-color:rgba(240, 240, 240,1);
+    padding: 1rem;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#menu{
+    display: none;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 25px;
+    background-color: #507D25;
+    color: #ffffff;
+    border: black solid 2.6px;
+    height: 4rem;
+    margin-top: 3rem;
+    margin-left: auto;
+    margin-right: 4rem;
+    background-color: #3a5c1b;
+}
+@media screen and (max-width: 1020px){
+    nav{
+        display: none;
+    }
+    #menu{
+        display:block; 
+    }
+    header{
+       max-width: 100vW;
+       justify-content: space-between;
+    }
+
+}
+@media screen and (max-width: 929px){
+    #cont1{
+        justify-content:center;
+    }
+    #cont1 img{
+        margin-left: 6rem;
+    }
+    #cont2{
+        justify-content:center;
+    }
+    #cont2 img{
+        margin-left: 6rem;
+    }
+    article {
+        background-color: white;
+        max-width: 80%;
+    }
+    #cannes{
+        display: none;
+    }
+
+}
