@@ -62,16 +62,3 @@ function delone(item){
     localStorage.setItem('ings', JSON.stringify(ingArray));
     item.parentElement.parentElement.remove();
 };
-
-//?
-function display() {
-    let spices = document.getElementById('spices');
-    let exact = document.getElementById('exact');
-    if (exact.checked) {
-        hide.style.display = 'block';
-
-    }else {
-        hide.style.display = 'none';
-
-    };
-};

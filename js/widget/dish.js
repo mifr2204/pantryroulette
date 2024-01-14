@@ -1,4 +1,4 @@
-//Modul export - Printar ut namnet på rätten
+//Printar ut namnet på rätten
 export function dname(dish){
     let ul = document.getElementById('dishlist');
     let li = document.createElement('li');
@@ -10,7 +10,7 @@ export function dname(dish){
     h2.setAttribute('class', 'name');
 };
 
-//Modul export - printar ut ingredienserna
+//printar ut ingredienserna
 export function ingredientsPrint(dish){
     
     let ingreditents = [];
@@ -65,12 +65,10 @@ export function ingredientsPrint(dish){
         li.appendChild(span);
         ul.appendChild(li);
         span.setAttribute('class', 'ingredients');
-
-    //TODO: skriv ut resultatet i HTML
 };
 
 
-//Modul export - Printar ut instruktionerna
+//Printar ut instruktionerna
 export function steps(dish){
     let dishinst = dish.analyzedInstructions
     dishinst.forEach(instPrint);

@@ -1,4 +1,4 @@
-//importera moduler
+//importera
 import { getFoodR } from "./widget/fetch.js";
 import { getFood } from "./widget/fetch.js";
 import { printFood } from "./widget/print.js";

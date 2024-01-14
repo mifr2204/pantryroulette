@@ -1,8 +1,8 @@
-//Importera moduler
+//Importera 
 import { ingredientsPrint, steps } from "./dish.js";
 import { dname } from "./dish.js";
 
-//Modul export - skriver ut maträtter
+//skriver ut maträtter
 export function printFood(data) {
     let disharray = data.results;
     disharray.forEach((dish) => {

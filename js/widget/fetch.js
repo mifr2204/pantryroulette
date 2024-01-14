@@ -1,4 +1,4 @@
-//Modul export - Hämtar lista över maträtter via api
+//Hämtar lista över maträtter via api
 export async function getFood() {
 
     const apikey = '&apiKey=123c9d35b1014e16a9c47bf62e7cad6e';
@@ -8,7 +8,7 @@ export async function getFood() {
     return data;
 };
 
-//Modul export - Hämtar slumpmässig maträtt via api
+// Hämtar slumpmässig maträtt via api
 export async function getFoodR() {
 
     const apikey = '&apiKey=123c9d35b1014e16a9c47bf62e7cad6e';
@@ -18,7 +18,7 @@ export async function getFoodR() {
     return data;
 };
 
-//skapar sträng över argument parametrar för api anrop
+//skapar sträng över argument parametrar för api anrop för serch
 function ListToSearch(){
     let result = '';
     let ingArray = localStorage.getItem('ings') ?
@@ -36,7 +36,7 @@ function ListToSearch(){
     
 }
 
-//skapar sträng över argument parametrar för api anrop
+//skapar sträng över argument parametrar för api anrop för roulette
 function ListToSearchRoulette(){
     let result = '';
     let ingArray = localStorage.getItem('ings') ?
