@@ -4,16 +4,23 @@ h1 {
 }
 h2{
     text-align: center;
+    text-decoration: underline;
+    font-size: 27px;
+}
+h3{
+    font-size: 23px;
 }
 p{
     font-size: 18px;
 }
-h1, nav, footer, #dishlist, #menu{
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 400;
+main{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 1.7rem;
+    letter-spacing: 0.08rem;
 }
-#dishlist, #list{
-    font-family: 'Poppins', sans-serif;
+h1, nav, footer, #dishlist, #list, #menu{
+    font-family: 'Josefin Sans', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
 }
 /*Allmänt*/
 a {
@@ -28,7 +35,56 @@ a:focus, button:focus, input[type="button"]:focus, #add:focus, #clear:focus, #su
     border: black solid 4px;
 }
 /*Buttons*/
-
+.submit{
+    float: right;
+    margin:0 2rem;
+}
+#backbtn{
+    margin-left: 3rem;
+    display: none;
+}
+button, #submitbtn, #submitbtnR, #add, #submitbtnCont{
+    padding: 0.2rem 0.6rem;
+    font-size: 15px;
+    background-color: #507D25;
+    color: #ffffff;
+    border: black solid 2.6px;
+    letter-spacing:1.5px;
+}
+#clear, .removeOne{
+    padding:0.1 0.4;
+    font-size:15px;
+    background-color: darkred;
+    color: #ffffff;
+    border: black solid 2.6px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing:1.5px;
+}
+#clear{
+    margin:1rem 0 0 2rem;
+}
+#submitbtnCondiv{
+    display: flex;
+    justify-content: flex-end;
+}
+#submitbtnCont{
+    margin-right: 3rem;
+    margin-top: 2rem;
+    margin:2rem 3rem 0 0;
+}
+#menu{
+    display: none;
+    padding:0.2rem 1rem;
+    font-size: 25px;
+    background-color: #507D25;
+    color: #ffffff;
+    border: black solid 2.6px;
+    height: 4rem;
+    margin-top: 3rem;
+    margin-left: auto;
+    margin-right: 4rem;
+    background-color: #3a5c1b;
+}
 /*Body*/
 body{
     margin: 0 auto 0;
@@ -56,11 +112,6 @@ nav {
     margin: 4rem 2rem 0 auto;
 }
 /*main*/
-main{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    line-height: 1.7rem;
-    letter-spacing: 0.08rem;
-}
 main a{
     color:#507D25;
     font: 600 20px;
@@ -105,31 +156,6 @@ article {
 }
 /*search roulette*/
 
-/*Contact*/
-
-
-#form {
-    background-color: #ffffff;
-    min-height: 300px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0;
-    padding: 2rem;
-}
-input {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    margin-left: 6rem;
-}
-label{
-    margin-left: 6rem;
-}
-.submit{
-    float: right;
-    margin-top: 0;
-    margin-right: 2rem;
-}
 .inglist{
     border: black 1px solid;
     font-size: 20px;
@@ -137,8 +163,6 @@ label{
 }
 .inglist h2{
     margin-bottom:3rem;
-    font-size: 27px;
-    text-align: center;
 }
 #list li{
     display: flex;
@@ -169,21 +193,15 @@ label{
     padding-right: 3rem;
 }
 #dishlist h2{
-    text-decoration: underline;
     border-top: black solid 3px;
     padding-top: 3rem;
     margin-bottom: 0;
 }
-h2{
-    text-decoration: underline;
-    font-size: 27px;
-}
-#dishlist h2, h3 {
+#dishlist h3 {
     text-align: center;
-}
-#dishlist h3{
     margin-top: 2.5rem;
 }
+
 #disches{
     display: none;
     background-color: white;
@@ -194,86 +212,23 @@ h2{
     margin-bottom: 0;
     padding-top: 2rem;
 }
-#backbtn{
-    margin-left: 3rem;
-    display: none;
+/*Contact*/
+#form {
+    background-color: #ffffff;
+    min-height: 300px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    padding: 2rem;
 }
-button, #submitbtn, #submitbtnR, #add, #submitbtnCont{
-    padding-top: 0.2rem;
-    padding-bottom: 0.2rem;
-    padding-left: 0.6rem;
-    padding-right: 0.6rem;
-    font-size: 15px;
-    background-color: #507D25;
-    color: #ffffff;
-    border: black solid 2.6px;
-}
-#clear, .removeOne{
-    padding-top: 0.1rem;
-    padding-bottom: 0.1rem;
-    padding-left: 0.4rem;
-    padding-right: 0.4rem;
-    font-size:15px;
-    background-color: darkred;
-    color: #ffffff;
-    border: black solid 2.6px;
-}
-#clear{
+input {
     margin-top: 1rem;
-    margin-left: 2rem;
-    margin-bottom: 0;
+    margin-bottom: 1rem;
+    margin-left: 6rem;
 }
-form h2{
-    text-align: center;
-}
-.artAbout{
-    background-image: url(/images/roulette.jpeg);
-    max-width: 550px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 4rem;
-    margin-bottom: 0;
-    padding-top: 2rem;
-    padding-left: 4rem;
-    padding-right: 4rem;
-    color: black
-}
-.artAbout h2{
-    text-align: center;
-    margin-bottom: 3rem; 
-}
-#aboutTop, #why{
-    background-color:rgba(240, 240, 240,0.94);
-    padding: 1rem;
-}
-
-#jessie, #mark, #fari{
-    align-items: center;
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 2rem;
-    background-color: #DAA960;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-}
-#jessie p, #mark p, #fari p{
-    max-width: 60%;
-}
-#jessie {
-    margin-top: 3rem;
-}
-h3{
-    font-size: 23px;
-}
-#why{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-#why img{
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 3rem;
+label{
+    margin-left: 6rem;
 }
 #contactform{
     border: rgba(240, 240, 240,1) solid 40px;
@@ -301,14 +256,6 @@ h3{
 #dCText{
     min-height: 3rem;
 }
-#submitbtnCondiv{
-    display: flex;
-    justify-content: flex-end;
-}
-#submitbtnCont{
-    margin-right: 3rem;
-    margin-top: 2rem;
-}
 #formP{
     max-width: 500px;
     margin-left: auto;
@@ -323,22 +270,57 @@ h3{
     margin-left: auto;
     margin-right: auto;
 }
-#menu{
-    display: none;
-    padding-top: 0.2rem;
-    padding-bottom: 0.2rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    font-size: 25px;
-    background-color: #507D25;
-    color: #ffffff;
-    border: black solid 2.6px;
-    height: 4rem;
-    margin-top: 3rem;
+/*About*/
+.artAbout{
+    background-image: url(/images/roulette.jpeg);
+    max-width: 550px;
     margin-left: auto;
-    margin-right: 4rem;
-    background-color: #3a5c1b;
+    margin-right: auto;
+    padding-bottom: 4rem;
+    margin-bottom: 0;
+    padding-top: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    color: black
 }
+.artAbout h2{
+    margin-bottom: 3rem; 
+}
+#aboutTop, #why{
+    background-color:rgba(240, 240, 240,0.94);
+    padding: 1rem;
+}
+
+#jessie, #mark, #fari{
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+    background-color: #DAA960;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+#jessie p, #mark p, #fari p{
+    max-width: 60%;
+}
+#jessie {
+    margin-top: 3rem;
+}
+
+#why{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#why img{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+}
+
+
+
+
 
 /*footer*/
 footer {
