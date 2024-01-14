@@ -41,7 +41,9 @@ function showMenu() {
     let li3 = document.getElementById('nav3');
     let li4 = document.getElementById('nav4');
     let li5 = document.getElementById('nav5');
-    if(nav.style.display === "none"){
+    if(nav.style.display === "block"){
+        nav.style.display = "none";
+    }else{
         nav.style.display = "block";
         ul.style.display = "block";
         nav.style.marginLeft = "7rem";
@@ -55,9 +57,6 @@ function showMenu() {
         li3.style.marginBottom ="1rem";
         li4.style.marginBottom ="1rem";
         li5.style.marginBottom ="1rem";
-        
-    }else{
-        nav.style.display = "none";
     }
     
 };
