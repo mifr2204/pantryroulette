@@ -47,7 +47,8 @@ function showMenu() {
         nav.style.marginLeft = "7rem";
         nav.style.marginTop = "7rem";
         ul.style.backgroundColor = "#507D25";
-        nav.style.position = "relative";
+        nav.style.position = "absolute";
+        nav.style.right = "0";
         menu.style.posision ="fixed";
         li1.style.marginBottom ="1rem";
         li2.style.marginBottom ="1rem";
