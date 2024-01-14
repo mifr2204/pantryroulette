@@ -1,18 +1,6 @@
-a:focus, button:focus, input[type="button"]:focus, #add:focus, #clear:focus, #submitbtn:focus, #submitbtnR:focus, #backbtn:focus{
-    border: black solid 4px;
-}
-main{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    line-height: 1.7rem;
-    letter-spacing: 0.08rem;
-}
-
-h1, nav, footer, #dishlist, #menu{
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 400;
-}
-#dishlist, #list{
-    font-family: 'Poppins', sans-serif;
+/*Fonter och headings*/
+h1 {
+    font-size: 40px;
 }
 h2{
     text-align: center;
@@ -20,12 +8,33 @@ h2{
 p{
     font-size: 18px;
 }
+h1, nav, footer, #dishlist, #menu{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+}
+#dishlist, #list{
+    font-family: 'Poppins', sans-serif;
+}
+/*Allmänt*/
+a {
+    text-decoration: none;
+    color: #ffffff; 
+    padding: 1rem;
+    margin: 0.1rem; 
+    font-size: 25px;
+}
+/*Tab-ordning markering*/
+a:focus, button:focus, input[type="button"]:focus, #add:focus, #clear:focus, #submitbtn:focus, #submitbtnR:focus, #backbtn:focus{
+    border: black solid 4px;
+}
+/*Buttons*/
+
+/*Body*/
 body{
-    margin: 0;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto 0;
     max-width: 1024px;
 }
+/*Header*/
 header {
     background-color: #507D25;
     margin: 0;
@@ -34,56 +43,51 @@ header {
 }
 #headimg {
     display: flex;
-    align-items:center;
+    align-items: center;
 }
 header img {
-    margin-left: 3rem;
-    margin-top: 1rem;
+    margin: 1rem 0 0 3rem ;
 }
 header h1 {
-    color: #ffffff;
-    margin-left: 3rem;
-    font-size: 40px;
-    margin-top: 2rem;
+    margin: 2rem 0 0 3rem;
 }
+/*Header-Nav*/
 nav {
-    margin-left: auto;
-    margin-right: 2rem;
-    margin-top: 3rem;
+    margin: 4rem 2rem 0 auto;
 }
+/*main*/
+main{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 1.7rem;
+    letter-spacing: 0.08rem;
+}
+main a{
+    color:#507D25;
+    font: 600 20px;
+}
+/*Lists*/
 ul {
     display: flex;
 }
 li {
     list-style: none;
 }
-a {
-    text-decoration: none;
-    color: #ffffff; 
-    padding: 1rem;
-    margin: 0.1rem; 
-    font-size: 25px;
-}
+/*background-image*/
 #img {
     background-color: #DAA960;
     background-image: url(/images/foodopa.png);
     background-position: center;
     background-size: 100wv;
     min-height: 100vh;
-    padding-top: 70px;
-    padding-bottom: 2rem;
+    padding: 8rem 0 1rem;
 }
+/*Home*/
 .cont {
     display: flex; 
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     font-weight: 400;
-}
-main a{
-    color:#507D25;
-    font-weight: 600;
-    font-size: 20px;
 }
 article {
     background-color: white;
@@ -99,13 +103,11 @@ article {
     padding-bottom: 5rem;
     padding-top: 3rem;
 }
-footer {
-    text-align: center;
-    background-color: #507D25;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    color:#ffffff    
-}
+/*search roulette*/
+
+/*Contact*/
+
+
 #form {
     background-color: #ffffff;
     min-height: 300px;
@@ -122,9 +124,6 @@ input {
 }
 label{
     margin-left: 6rem;
-}
-.ticboxes {
-    margin-bottom: 3rem;
 }
 .submit{
     float: right;
@@ -340,6 +339,17 @@ h3{
     margin-right: 4rem;
     background-color: #3a5c1b;
 }
+
+/*footer*/
+footer {
+    text-align: center;
+    background-color: #507D25;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color:#ffffff    
+}
+
+/*media*/
 @media screen and (max-width: 1020px){
     nav{
         display: none;
