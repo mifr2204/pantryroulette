@@ -34,7 +34,37 @@ if (backbtn) {
 //vida meny i responsivt läge
 function showMenu() {  
     let nav = document.getElementById('nav');
-    nav.style.display = "flex";
+    let menu = document.getElementById('menu');
+    let ul = document.getElementById('ulnav');
+    let li1 = document.getElementById('nav1');
+    let li2 = document.getElementById('nav2');
+    let li3 = document.getElementById('nav3');
+    let li4 = document.getElementById('nav4');
+    let li5 = document.getElementById('nav5');
+    if(nav.style.display === "none"){
+        nav.style.display = "block";
+        ul.style.display = "block";
+        nav.style.marginLeft = "7rem";
+        nav.style.marginTop = "7rem";
+        ul.style.backgroundColor = "#507D25";
+        nav.style.position = "relative";
+        menu.style.posision ="fixed";
+        li1.style.marginBottom ="1rem";
+        li2.style.marginBottom ="1rem";
+        li3.style.marginBottom ="1rem";
+        li4.style.marginBottom ="1rem";
+        li5.style.marginBottom ="1rem";
+        
+    }else{
+        nav.style.display = "none";
+    }
+    
+};
+
+//vida meny i responsivt läge
+function hideMenu() {  
+    let nav = document.getElementById('nav');
+    nav.style.display = "none";
 };
 
 //genomför roulette

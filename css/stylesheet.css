@@ -68,9 +68,7 @@ button, #submitbtn, #submitbtnR, #add, #submitbtnCont{
     justify-content: flex-end;
 }
 #submitbtnCont{
-    margin-right: 3rem;
-    margin-top: 2rem;
-    margin:2rem 3rem 0 0;
+    margin:2rem 3rem 0 1rem;
 }
 #menu{
     display: none;
@@ -80,9 +78,7 @@ button, #submitbtn, #submitbtnR, #add, #submitbtnCont{
     color: #ffffff;
     border: black solid 2.6px;
     height: 4rem;
-    margin-top: 3rem;
-    margin-left: auto;
-    margin-right: 4rem;
+    margin: 3rem 4rem 0 auto;
     background-color: #3a5c1b;
 }
 /*Body*/
@@ -125,12 +121,9 @@ li {
 }
 /*background-image*/
 #img {
-    background-color: #DAA960;
-    background-image: url(/images/foodopa.png);
-    background-position: center;
-    background-size: 100wv;
     min-height: 100vh;
     padding: 8rem 0 1rem;
+    background: url(/images/foodopa.png) center #DAA960; 
 }
 /*Home*/
 .cont {
@@ -138,31 +131,27 @@ li {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    font-weight: 400;
 }
 article {
     background-color: white;
     max-width: 43%;
-    margin-left: 3rem;
-    padding: 1rem;
-    margin-bottom: 1rem;
+    padding: 1.3rem;
+    margin: 0 0rem 3rem 3rem;
 }
 .cont img {
     margin-right: 3rem;
 }
 #cont2 {
-    padding-bottom: 5rem;
-    padding-top: 3rem;
+    padding: 3rem 0 5rem;
 }
 /*search roulette*/
-
 .inglist{
     border: black 1px solid;
     font-size: 20px;
     margin-top: 2rem;
 }
 .inglist h2{
-    margin-bottom:3rem;
+    margin-bottom:2rem;
 }
 #list li{
     display: flex;
@@ -170,168 +159,29 @@ article {
 }
 .removeOne{
     margin-right: 150px;
-    margin-top:0;
 }
 .spanIng{
     margin-left: 100px;
 }
-#hide{
-    display: none;
-}
 #list {
     display: block;
 }
-#dishlist{
-    display: block;
-    margin-top: 0;
-    display: none;
-    padding-left: 0;
-    text-align: center;
-}
-#dishlist li{
-    padding-left: 3rem;
-    padding-right: 3rem;
-}
-#dishlist h2{
-    border-top: black solid 3px;
-    padding-top: 3rem;
-    margin-bottom: 0;
-}
-#dishlist h3 {
-    text-align: center;
-    margin-top: 2.5rem;
-}
-
-#disches{
-    display: none;
-    background-color: white;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 4rem;
-    margin-bottom: 0;
-    padding-top: 2rem;
-}
-/*Contact*/
 #form {
     background-color: #ffffff;
     min-height: 300px;
     max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0;
+    margin: 0 auto;
     padding: 2rem;
 }
+#form h2{
+    margin-bottom: 3rem;
+}
 input {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    margin-left: 6rem;
+    margin: 1rem 0 1rem 6rem;
 }
 label{
     margin-left: 6rem;
 }
-#contactform{
-    border: rgba(240, 240, 240,1) solid 40px;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1rem;
-    padding-top: 1rem;
-    background-color: #DAA960;
-}
-.cForm{
-    display: flex;
-    justify-content:flex-end;
-    margin-top: 1rem;
-}
-.cForm input, .cForm label, .cForm textarea{
-    margin: 0;
-}
-.cForm input, .cForm textarea{
-    margin-right: 6rem;
-}
-.cForm label{
-    margin-right: 5rem;
-}
-#dCText{
-    min-height: 3rem;
-}
-#formP{
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2rem;
-    text-align: center;
-}
-#headC{
-    background-color:rgba(240, 240, 240,1);
-    padding: 1rem;
-    max-width: 550px;
-    margin-left: auto;
-    margin-right: auto;
-}
-/*About*/
-.artAbout{
-    background-image: url(/images/roulette.jpeg);
-    max-width: 550px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 4rem;
-    margin-bottom: 0;
-    padding-top: 2rem;
-    padding-left: 4rem;
-    padding-right: 4rem;
-    color: black
-}
-.artAbout h2{
-    margin-bottom: 3rem; 
-}
-#aboutTop, #why{
-    background-color:rgba(240, 240, 240,0.94);
-    padding: 1rem;
-}
-
-#jessie, #mark, #fari{
-    align-items: center;
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 2rem;
-    background-color: #DAA960;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-}
-#jessie p, #mark p, #fari p{
-    max-width: 60%;
-}
-#jessie {
-    margin-top: 3rem;
-}
-
-#why{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-#why img{
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 3rem;
-}
-
-
-
-
-
-/*footer*/
-footer {
-    text-align: center;
-    background-color: #507D25;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    color:#ffffff    
-}
-
-/*media*/
 #videomodal {
     position: fixed;
     left: 0;
@@ -346,6 +196,110 @@ footer {
     display: flex;
     justify-content: center;
 }
+/*serch-roulette dishes*/
+#dishlist{
+    padding-left: 0;
+    text-align: center;
+}
+#dishlist li{
+    padding: 0 3rem;
+}
+#dishlist h2{
+    border-top: black solid 3px;
+    padding-top: 3rem;
+    margin-bottom: 0;
+}
+#dishlist h3 {
+    text-align: center;
+    margin-top: 2.5rem;
+}
+#disches{
+    display: none;
+    background-color: white;
+    max-width: 600px;
+    padding: 2rem 0 4rem;
+    margin: 0 auto;
+}
+/*Contact*/
+#contactform{
+    border: rgba(240, 240, 240,1) solid 40px;
+    max-width: 500px;
+    padding-top: 1rem;
+    background-color: #DAA960;
+    margin: 1rem auto 0;
+}
+.cForm{
+    display: flex;
+    justify-content:flex-end;
+    margin-top: 1rem;
+}
+.cForm label{
+    margin: 0 5rem 0 0;
+}
+.cForm input, .cForm textarea{
+    margin: 0 6rem 0 0;
+}
+#dCText{
+    min-height: 3rem;
+}
+#formP{
+    max-width: 500px;
+    text-align: center;
+    margin: 2rem auto 0;
+}
+#headC{
+    background-color:rgba(240, 240, 240,1);
+    padding: 1rem;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+/*About*/
+.artAbout{
+    background-image: url(/images/roulette.jpeg);
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 2rem 4rem 4rem;
+    color: black;
+}
+.artAbout h2{
+    margin-bottom: 3rem; 
+}
+#aboutTop, #why{
+    background-color:rgba(240, 240, 240,0.94);
+    padding: 1rem;
+}
+#jessie, #mark, #fari{
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+    background-color: #DAA960;
+    padding: 0.5rem 0;
+}
+#jessie p, #mark p, #fari p{
+    max-width: 60%;
+}
+#jessie {
+    margin-top: 3rem;
+}
+#why{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#why img{
+    margin: 3rem auto 0;
+}
+/*footer*/
+footer {
+    text-align: center;
+    background-color: #507D25;
+    padding: 1rem 0;
+    color:#ffffff;    
+}
+/*media*/
+
 @media screen and (max-width: 1020px){
     nav{
         display: none;
