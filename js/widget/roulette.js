@@ -47,14 +47,14 @@ function addbutton(){
 //Radera samtliga ingredienser
 function delbutton(){
     localStorage.clear();
-    ul.innerHTML = '';
+    tbody.innerHTML = '';
     ingArray = [];
 
 };
 
 //Radera specifik ingrediens
 function delone(item){
-    let value = item.parentElement.querySelector('span').innerText;
+    let value = item.parentElement.parentElement.querySelector('span').innerText;
     for (let i = 0; i < ingArray.length; i++) {
         if (ingArray[i] == value) {
             ingArray.splice(i, 1);
@@ -62,7 +62,7 @@ function delone(item){
         }
     }
     localStorage.setItem('ings', JSON.stringify(ingArray));
-    item.parentElement.remove();
+    item.parentElement.parentElement.remove();
 };
 
 //?
